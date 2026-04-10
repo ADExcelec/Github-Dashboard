@@ -1,0 +1,143 @@
+.prd-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  color: #132033;
+}
+
+.prd-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.prd-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-guide {
+  margin: 0.7rem 0 0.2rem;
+  background: #fff8e8;
+  border: 1px solid #efd6a7;
+  border-radius: 10px;
+  padding: 0.75rem 0.85rem;
+}
+
+.form-guide p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #5b4314;
+}
+
+.prd-section {
+  background: #f3f8ff;
+  border: 1px solid #c7d8ef;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.prd-section h2 {
+  margin: 0 0 0.7rem;
+  font-size: 1.1rem;
+}
+
+.grid-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.prd-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.92rem;
+}
+
+.field-hint {
+  font-size: 0.76rem;
+  color: #405673;
+}
+
+.prd-form input,
+.prd-form textarea,
+.prd-form select {
+  width: 100%;
+  border: 1px solid #a8bfdc;
+  border-radius: 8px;
+  padding: 0.55rem 0.65rem;
+  font: inherit;
+  background: #ffffff;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rf-card {
+  border: 1px solid #d6e3f4;
+  border-radius: 10px;
+  background: #fff;
+  padding: 0.9rem;
+  margin-top: 0.8rem;
+}
+
+.rf-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.rf-card-head h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.prd-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.prd-actions button,
+.section-head button,
+.rf-card-head button {
+  border: 0;
+  border-radius: 8px;
+  background: #0f4c81;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.55rem 0.85rem;
+  cursor: pointer;
+}
+
+.prd-actions button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.prd-error {
+  margin-top: 0.7rem;
+  color: #9d1f28;
+  font-weight: 600;
+}
+
+.prd-result {
+  margin-top: 0.9rem;
+  border: 1px solid #b7ddc0;
+  background: #eefbf1;
+  border-radius: 10px;
+  padding: 0.9rem;
+}
+
+.prd-result h2 {
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .grid-two {
+    grid-template-columns: 1fr;
+  }
+}

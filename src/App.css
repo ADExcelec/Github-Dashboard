@@ -1,1 +1,49 @@
-/* App styles intentionally minimal. Dashboard styles live in styles/ProjectsList.css */
+.app-shell {
+	min-height: 100vh;
+	background: linear-gradient(170deg, #f6fbff 0%, #ecf4ff 60%, #f2fff7 100%);
+}
+
+.app-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem 1.4rem;
+	border-bottom: 1px solid #cad7eb;
+	background: #ffffffcc;
+	backdrop-filter: blur(4px);
+}
+
+.app-header h1 {
+	margin: 0;
+	font-size: 1.2rem;
+	color: #11243e;
+}
+
+.app-header nav {
+	display: flex;
+	gap: 0.6rem;
+}
+
+.app-header button {
+	border: 1px solid #9ab7d8;
+	background: #fff;
+	color: #17345a;
+	font-weight: 600;
+	border-radius: 9px;
+	padding: 0.48rem 0.82rem;
+	cursor: pointer;
+}
+
+.app-header button.is-active {
+	background: #0f4c81;
+	border-color: #0f4c81;
+	color: #fff;
+}
+
+@media (max-width: 760px) {
+	.app-header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}

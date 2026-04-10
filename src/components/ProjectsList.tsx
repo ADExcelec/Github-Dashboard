@@ -48,6 +48,29 @@ function formatDueDate(date?: string): string {
   }).format(new Date(date));
 }
 
+function formatDueDateDetail(date?: string): string {
+  if (!date) {
+    return 'Sin fecha objetivo';
+  }
+
+  const today = new Date();
+  const target = new Date(date);
+  const todayDate = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+  const targetDate = new Date(target.getFullYear(), target.getMonth(), target.getDate());
+  const diffInDays = Math.round((targetDate.getTime() - todayDate.getTime()) / (1000 * 60 * 60 * 24));
+
+  if (diffInDays === 0) {
+    return 'Vence hoy';
+  }
+
+  if (diffInDays > 0) {
+    return `Vence en ${diffInDays} dia${diffInDays === 1 ? '' : 's'}`;
+  }
+
+  const overdueDays = Math.abs(diffInDays);
+  return `Vencido hace ${overdueDays} dia${overdueDays === 1 ? '' : 's'}`;
+}
+
 function getDueDateTone(date?: string): 'is-urgent' | 'is-soon' | 'is-planned' | 'is-undated' {
   if (!date) {
     return 'is-undated';
@@ -264,6 +287,7 @@ export function ProjectsList() {
                     <div className={`milestone-date-badge ${getDueDateTone(milestone.dueDate)}`}>
                       <span className="milestone-date-label">Entrega</span>
                       <strong>{formatDueDate(milestone.dueDate)}</strong>
+                      <span className="milestone-date-detail">{formatDueDateDetail(milestone.dueDate)}</span>
                     </div>
                   </div>
 
